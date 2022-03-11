@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+
+  headline_list = [
+    {name: 'h1'},
+    {name: 'h2'},
+    {name: 'h3'}
+  ];
 }
