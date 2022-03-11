@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+interface Headline {
+  name: string
+  author: string
+  time: number
+}
 
 @Component({
   selector: 'app-headline',
@@ -6,9 +12,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./headline.component.css']
 })
 export class HeadlineComponent implements OnInit {
-  headline = ''
 
-  constructor() { }
+  @Input()
+  headline: Headline
+
+  get TimeAgo() {
+    if (this.headline.time) {
+      return Date.now() - this.headline.time
+    }
+  }
 
   ngOnInit(): void {
   }

@@ -1,9 +1,15 @@
 <style>
     #headline {
         font-size: 30px;
+        font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
+    }
+    #author {
+        font-size: 15px;
     }
 </style>
 
-<div id="headline">
-    <b>{{ headline }}</b>
+<div>
+    <p id="author">{{ headline.author }}</p>
+    <p id="timeAgo">{{ headline.TimeAgo }}</p>
+    <b id="headline">{{ headline.name }}</b>
 </div>
