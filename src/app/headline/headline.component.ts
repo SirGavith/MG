@@ -17,10 +17,8 @@ export class HeadlineComponent implements OnInit {
   headline!: Headline
 
   get TimeAgo() {
-    if (this.headline.time) {
-      return Date.now() - this.headline.time
-    }
-    return this.headline.time
+    console.log(this.headline.time, Math.floor(Date.now() / 1000))
+    return Math.floor(Date.now() / 1000) - this.headline.time
   }
 
   ngOnInit(): void {
