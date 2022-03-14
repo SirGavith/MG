@@ -41,9 +41,10 @@
 
 <div class="content" role="main" id="container">
   <div id="headlines" id="panel">
-    <div *ngFor="let h of headline_list">
+    <!-- <div *ngFor="let h of headline_list">
       <app-headline headline={{h}}></app-headline>
-    </div>
+    </div> -->
+    <app-headline *ngFor="let item of headline_list" [headline]="item"></app-headline>
   </div>
   <div id="article" id="panel">
     Right Side Menu

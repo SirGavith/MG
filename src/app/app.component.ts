@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Headline } from 'src/app/headline/headline.component'
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
 
-  headline_list = [
+  headline_list: Array<Headline> = [
     {
       name: 'Russian convoy stalled near Kyiv has moved into the woods, Pentagon says.',
       author: 'Eric Schmitt',

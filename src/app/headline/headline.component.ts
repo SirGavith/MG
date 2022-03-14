@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-interface Headline {
+export interface Headline {
   name: string
   author: string
   time: number
@@ -14,12 +14,13 @@ interface Headline {
 export class HeadlineComponent implements OnInit {
 
   @Input()
-  headline: Headline
+  headline!: Headline
 
   get TimeAgo() {
     if (this.headline.time) {
       return Date.now() - this.headline.time
     }
+    return this.headline.time
   }
 
   ngOnInit(): void {
