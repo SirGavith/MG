@@ -17,33 +17,19 @@
     height: 100%;
     width: 100%;
     display: flex;
-
   }
-
   #panel {
     width: 50%;
     margin: 10px;
   }
-
   #headlines {
-    background: blue;
   }
   #article {
-    background: yellow;
-  }
-
-  #headline {
-    width: 100%;
-    height: 100px;
-
   }
 </style>
 
 <div class="content" role="main" id="container">
   <div id="headlines" id="panel">
-    <!-- <div *ngFor="let h of headline_list">
-      <app-headline headline={{h}}></app-headline>
-    </div> -->
     <app-headline *ngFor="let item of headline_list" [headline]="item"></app-headline>
   </div>
   <div id="article" id="panel">
