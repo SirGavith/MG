@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Headline } from 'src/app/headline/headline.component'
-
+import { Article } from 'src/app/article/article.component'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,5 +25,13 @@ export class AppComponent {
       author: 'Zolan Kanno-Youngs and Matthew Mpoke Bigg',
       time: 1647271076
     },
+  ];
+  article_list: Array<Article> = [
+    {
+      name: 'Russian convoy stalled near Kyiv has moved into the woods, Pentagon says.',
+      author: 'Eric Schmitt',
+      text: 'yeah there is definitely a whole article here'
+    },
+  
   ];
 }
