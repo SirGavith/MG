@@ -17,10 +17,7 @@ export class HeadlineComponent implements OnInit {
     return Math.floor(Date.now() / 1000) - this.article.time
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  clicked() {
-    this.articleClick.emit(this.article);
-  }
+  clicked = () => this.articleClick.emit(this.article)
 }

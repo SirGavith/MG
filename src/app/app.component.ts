@@ -47,9 +47,5 @@ President Biden has maintained that he will not send American troops to fight Ru
 
   selected_article: Article | null = this.article_list[0]
 
-  onArticleClick(event: Article) {
-    this.selected_article = event
-    console.log(event)
-  }
-  
+  onArticleClick = (event: Article) => this.selected_article = event
 }
