@@ -8,10 +8,10 @@
     }
 </style>
 
-<div>
+<div (click)="clicked()">
     <div>
-        <span id="author">{{ headline.author }} </span>
+        <span id="author">{{ article.author }} </span>
         <span id="timeAgo">{{ TimeAgo }}        </span>
     </div>
-    <b id="headline">{{ headline.name }}</b>
+    <b id="headline">{{ article.name }}</b>
 </div>

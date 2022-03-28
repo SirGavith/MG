@@ -1,10 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-
-export interface Headline {
-  name: string
-  author: string
-  time: number
-}
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Article } from '../article/article.component';
 
 @Component({
   selector: 'app-headline',
@@ -14,13 +9,18 @@ export interface Headline {
 export class HeadlineComponent implements OnInit {
 
   @Input()
-  headline!: Headline
+  article!: Article
+
+  @Output() articleClick = new EventEmitter<Article>();
 
   get TimeAgo() {
-    return Math.floor(Date.now() / 1000) - this.headline.time
+    return Math.floor(Date.now() / 1000) - this.article.time
   }
 
   ngOnInit(): void {
   }
 
+  clicked() {
+    this.articleClick.emit(this.article);
+  }
 }

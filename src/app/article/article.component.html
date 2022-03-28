@@ -6,18 +6,17 @@
     #author {
         font-size: 15px;
     }
-    
+    #text {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 </style>
 
 <div>
     <div>
-        <span id="author">{{ article.author }} </span>
-        <span id="timeAgo">{{ TimeAgo }}        </span>
-        
+        <span id="author">{{ article?.author ?? '' }} </span>
+        <span id="timeAgo">{{ TimeAgo }}        </span> 
     </div>
-    <b id="name">{{ article.name }}</b>
-    <div>
-        <p id="text">{{ article.text }}</p>
-    </div>
+    <b id="name">{{ article?.name ?? '' }}</b>
+    <p id="text">{{ article?.text ?? '' }}</p>
 </div>
-

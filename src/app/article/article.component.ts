@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface Article {
   name: string
@@ -14,11 +14,12 @@ export interface Article {
 export class ArticleComponent implements OnInit {
   
   @Input()
-  article!: Article
+  article: Article | null = null
+
 
   get TimeAgo() {
-    console.log(this.article.time, Math.floor(Date.now() / 1000))
-    return Math.floor(Date.now() / 1000) - this.article.time
+    if (this.article) return Math.floor(Date.now() / 1000) - this.article.time
+    else return null
   }
 
   constructor() { }
