@@ -17,7 +17,6 @@ export class HeadlineComponent implements OnInit {
   headline!: Headline
 
   get TimeAgo() {
-    console.log(this.headline.time, Math.floor(Date.now() / 1000))
     return Math.floor(Date.now() / 1000) - this.headline.time
   }
 
