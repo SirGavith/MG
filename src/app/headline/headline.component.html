@@ -6,12 +6,23 @@
     #author {
         font-size: 15px;
     }
+    #authorTime {
+        padding-top: 5px;
+    }
+    hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
 </style>
 
 <div (click)="clicked()">
     <b id="headline">{{ article.name }}</b>
-    <div>
+    <div id="authorTime">
         <span id="author">{{ article.author }} </span>
         <span id="timeAgo">{{ DisplayTime }}        </span>
     </div>
+    <hr />
 </div>
