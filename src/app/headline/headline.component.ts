@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Article } from '../article/article.component';
+import { TimeService } from '../time.service';
+
 
 @Component({
   selector: 'app-headline',
@@ -7,14 +9,18 @@ import { Article } from '../article/article.component';
   styleUrls: ['./headline.component.css']
 })
 export class HeadlineComponent implements OnInit {
+  constructor(private timeService: TimeService) {}
 
   @Input()
   article!: Article
 
   @Output() articleClick = new EventEmitter<Article>();
 
-  get TimeAgo() {
-    return Math.floor(Date.now() / 1000) - this.article.time
+  get DisplayTime() {
+    if (this.article) {
+      return this.timeService.TimeAgoText(this.article.time)
+    }
+    return null
   }
 
   ngOnInit(): void { }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TimeService } from '../time.service';
 
 export interface Article {
   name: string
@@ -12,12 +13,16 @@ export interface Article {
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+  constructor(private timeService: TimeService) {}
+
   @Input()
   article: Article | null = null
 
-  get TimeAgo() {
-    if (this.article) return Math.floor(Date.now() / 1000) - this.article.time
-    else return null
+  get DisplayTime() {
+    if (this.article) {
+      return this.timeService.TimeAgoText(this.article.time)
+    }
+    return null
   }
 
   ngOnInit(): void { }

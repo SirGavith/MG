@@ -5,11 +5,15 @@
     
     }
     #author {
-        font-size: 15px;
+        font-size: 18px;
+    }
+    #timeAgo {
+        font-size: 18px;
     }
     #text {
-        margin-left: 5%;
-        margin-right: 10%;
+        font-size: 20px;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 </style>
 
@@ -18,7 +22,7 @@
     <b id="name">{{ article?.name ?? '' }}</b>
     <div>
         <span id="author">{{ article?.author ?? '' }} </span>
-        <span id="timeAgo">{{ TimeAgo }}        </span> 
+        <span id="timeAgo">{{ DisplayTime }}        </span> 
     </div>
     <p id="text">{{ article?.text ?? '' }}</p>
 

@@ -1,43 +1,10 @@
-
-<style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: rgb(51, 51, 51);
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-</style>
-
-<!-- Toolbar -->
-
-<style type="text/css">
-  #container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-  }
-  #panel {
-    width: 50%;
-    margin: 10px;
-    overflow: auto;
-  }
-  #headline {
-    margin: 50px;
-  }
-  #article {
-    margin-left: 100px;
-  }
-</style>
-
 <div class="content" role="main" id="container">
-  <div id="headlines" id="panel">
+  <div id="headlinePanel" class="panel">
     <app-headline id="headline"
       *ngFor="let item of article_list" [article]="item"
       (articleClick)="onArticleClick($event)"></app-headline>
   </div>
-  <div id="panel">
+  <div id="articlePanel" class="panel">
     <app-article id="article" [article]="selected_article"></app-article>
   </div>
 </div>
