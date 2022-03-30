@@ -15,12 +15,16 @@
         margin-left: 15%;
         margin-right: 15%;
     }
+    #authorTime {
+        padding-top: 5px;
+    }
+    
 </style>
 
 <div>
     
     <b id="name">{{ article?.name ?? '' }}</b>
-    <div>
+    <div id="authorTime">
         <span id="author">{{ article?.author ?? '' }} </span>
         <span id="timeAgo">{{ DisplayTime }}        </span> 
     </div>
