@@ -78,6 +78,18 @@ Mr. Putin himself has not commented on what the Kremlin calls a “special milit
 She described the negotiations as, most likely, a feint rather than a signal that Russia was ready to wind down the war. But she noted that — as was the case in the run-up to the invasion — senior Russian officials were unlikely to know what Mr. Putin was really planning, leading to this week’s mixed messages.
 
 “The problem with the Russian regime is that, once again, no one understands what Putin wants,” Ms. Stanovaya said. “As a result, we get this informational chaos.”`
+    },
+    {
+      name: 'Serbia, bound by a sense of grievance against the West, sticks with Russia.',
+      author: 'Andrew Higgins',
+      time: 1648453678,
+      text: `BELGRADE, Serbia — Mindful of the angry and still-unhealed wounds left by NATO’s bombing of Serbia more than 20 years ago, Ukraine’s ambassador appeared on Serbian television after Russia invaded and bombed his country in the hope of rousing sympathy.`
+    },
+    {
+      name: 'German authorities are warning arriving refugees to watch out for thieves.',
+      author: 'Christopher F. Schuetze',
+      time: 1648453878,
+      text: `BERLIN — Ukrainians fleeing war in their homeland remain vulnerable when arriving in Germany, the authorities in Berlin have warned, saying that thieves have been targeting the refugees — mostly women and children — at Berlin’s main train station and bus depot.`
     }
   ];
 
