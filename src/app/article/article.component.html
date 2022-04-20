@@ -25,12 +25,12 @@
 </style>
 
 <div>
-    
     <b id="name">{{ article?.name ?? '' }}</b>
     <div id="authorTime">
         <span id="author">{{ article?.author ?? '' }} </span>
+        <span> - </span>
         <span id="timeAgo">{{ DisplayTime }}        </span> 
     </div>
-    <p id="text">{{ article?.text ?? '' }}</p>
+    <p id="text">{{ article?.body ?? '' }}</p>
 
 </div>
