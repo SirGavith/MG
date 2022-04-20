@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://mg-functions0.azurewebsites.net/api/HttpTriggerFetchAll",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

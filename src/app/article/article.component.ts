@@ -5,7 +5,8 @@ export interface Article {
   name: string
   author: string
   time: number
-  text: string
+  body: string
+  guid: string
 }
 @Component({
   selector: 'app-article',
