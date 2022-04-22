@@ -1,0 +1,11 @@
+<div class="content" role="main" id="container">
+    <div id="headlinePanel" class="panel">
+        <app-headline id="headline" *ngFor="let item of article_list" [article]="item"
+            (articleClick)="onArticleClick($event)">
+        </app-headline>
+
+    </div>
+    <div id="articlePanel" class="panel">
+        <app-article id="article" [article]="selected_article"></app-article>
+    </div>
+</div>
