@@ -1,3 +1,23 @@
-<p>new-article works!</p>
+<div id="newArticleContainer">
+    <h1>Publish a New Article</h1>
+    <div>
+        <mat-form-field appearance="outline" id="titleField">
+            <mat-label>Article Title</mat-label>
+            <input matInput>
+        </mat-form-field>
 
-    <input title="Article Title" >
+        <mat-form-field appearance="outline" id="authorField">
+            <mat-label>Article Author</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <button mat-stroked-button id="publishButton" (click)="onPublish()">Publish Article</button>
+    </div>
+    
+    <div id="bodyContainer">
+        <mat-form-field appearance="outline" id="bodyField">
+            <mat-label>Article Body</mat-label>
+            <textarea matInput rows="20"></textarea>
+        </mat-form-field>
+    </div>
+</div>

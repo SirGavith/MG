@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatInputModule } from '@angular/material/input'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button'; 
+import { FormsModule, NgModel } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeadlineComponent } from './headline/headline.component';
@@ -19,7 +24,13 @@ import { MainViewerComponent } from './main-viewer/main-viewer.component';
   ],
   imports: [
     BrowserModule,
+    MatFormFieldModule,
+    MatInputModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    // NgModel,
+    // FormsModule,
     RouterModule.forRoot([
       { path: 'new', component: NewArticleComponent },
       { path: '**', component: MainViewerComponent },
