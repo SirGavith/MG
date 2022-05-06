@@ -29,7 +29,7 @@ export class NewArticleComponent implements OnInit {
 
     console.log('making web request', article)
 
-    this.http.post('http://example.com', JSON.stringify(article), {
+    this.http.post('https://mg-functions0.azurewebsites.net/api/HttpTriggerAddNewArticle?', JSON.stringify(article), {
       //headers
 
     })
