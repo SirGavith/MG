@@ -22,19 +22,16 @@ export class NewArticleComponent implements OnInit {
     const article: Article = {
       name: this.title,
       author: this.author,
-      time: Date.now(),
+      time: Date.now() / 1000,
       body: this.body,
       guid: NewArticleComponent.newGuid(),
     }
 
     console.log('making web request', article)
 
-    this.http.post('https://mg-functions0.azurewebsites.net/api/HttpTriggerAddNewArticle?', JSON.stringify(article), {
-      //headers
-
-    })
+    this.http.post('https://mg-functions0.azurewebsites.net/api/HttpTriggerAddNewArticle?',
+      JSON.stringify(article))
   }
-
 
   static newGuid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {

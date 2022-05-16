@@ -3,12 +3,12 @@
     <div>
         <mat-form-field appearance="outline" id="titleField">
             <mat-label>Article Title</mat-label>
-            <input matInput>
+            <input #tbox matInput (keyup)= "this.title = tbox.value">
         </mat-form-field>
 
         <mat-form-field appearance="outline" id="authorField">
             <mat-label>Article Author</mat-label>
-            <input matInput>
+            <input #abox matInput (keyup)= "this.author = abox.value">
         </mat-form-field>
 
         <button mat-stroked-button id="publishButton" (click)="onPublish()">Publish Article</button>
@@ -17,7 +17,7 @@
     <div id="bodyContainer">
         <mat-form-field appearance="outline" id="bodyField">
             <mat-label>Article Body</mat-label>
-            <textarea matInput rows="20"></textarea>
+            <textarea #bbox matInput rows="20" (keyup)= "this.body = bbox.value"></textarea>
         </mat-form-field>
     </div>
 </div>
